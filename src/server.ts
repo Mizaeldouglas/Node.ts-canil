@@ -23,7 +23,7 @@ server.use(express.static(path.join(__dirname, '../public')))
 server.use(maiRoutes)
 
 server.use((req,res) => {
-	res.send('paginaNão encontrada!')
+	res.render('pages/404')
 })
 
 server.listen(process.env.PORT)
